@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pafrontend-deployment
+  name: frontend-deployment
   labels:
-    app: pafrontend
+    app: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pafrontend
+      app: frontend
   template:
     metadata:
       labels:
-        app: pafrontend
+        app: frontend
     spec:
       containers:
-      - name: pafrontend
-        image: salinasmiguel/pafrontend
+      - name: frontend
+        image: salinasmiguelg/fronttt
         imagePullPolicy: Always
         ports:
-        -name: http
-        - containerPort: 3000
+        - name: http
+          containerPort: 3000
